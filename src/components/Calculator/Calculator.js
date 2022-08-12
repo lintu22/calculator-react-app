@@ -6,15 +6,53 @@ class Calculator extends React.Component {
         super(props);
         
         this.state = {
-            data: [],
+            input: [],
         }
+
     }
+
     render () {
         return(
             <div>
                 <Button 
-                    value='1'
-                    onClick={(value) => this.state.data.push(value)}
+                    number={1}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={2}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={3}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={4}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={5}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={6}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={7}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={8}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={9}
+                    onClick={(number) => this.state.input.push(number)}
+                />
+                <Button 
+                    number={0}
+                    onClick={(number) => this.state.input.push(number)}
                 />
             </div>
         );
