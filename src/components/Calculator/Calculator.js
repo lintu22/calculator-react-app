@@ -6,34 +6,32 @@ class Calculator extends React.Component {
     constructor(props) {
         super(props);
         
+        // set the initial display to 0
         this.state = {
-            numberInput: '0'
+            numberInput: ''
         }
-
+        // bind this
         this.handleNumberClick = this.handleNumberClick.bind(this);
 
     }
 
     handleNumberClick (number) {
-
-        let numberInputState = this.state.numberInput; 
         
-        if (numberInputState === '0') {
-            this.setState({numberInput: numberInputState = ''})
-        }
-        this.setState({ numberInput: numberInputState + number })
+        // Update the string with the number
+        this.setState({ numberInput: this.state.numberInput + number })
 
     }
 
 
-
     render () {
         return(
-            <div className="container grid grid-cols-3 gap-3 max-w-sm">
+            <div className="container mt-6 border rounded-lg border-slate-400 bg-slate-300 p-7 mx-auto grid grid-cols-3 gap-3 max-w-sm">
                 <Display
-                output={this.state.numberInput} />
+                    output={this.state.numberInput} 
+                />
                 
                 <Button 
+                    className="bg-slate-500"
                     number={1}
                     onClick={this.handleNumberClick}
                 />
