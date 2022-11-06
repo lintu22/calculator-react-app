@@ -1,7 +1,10 @@
+const defaultClasses = 'w-full p-4 text-xl rounded-xl border border-width-2 bg-white border-slate-400 '
+
 const Button = (props) => {
 
     return (
-        <button className='px-10 py-6 text-slate-500 rounded-xl border border-width-2 border-purple-300'
+        <button 
+        className={defaultClasses + props.className}
         onClick={() => props.onClick(props.number)}
         >
             {props.number}
