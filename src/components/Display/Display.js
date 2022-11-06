@@ -1,12 +1,12 @@
 
-
-
+const defaultClasses = 'h-24 w-auto flex items-center justify-end text-5xl col-span-3 text-white bg-slate-800 border rounded-xl py-2 px-4 '
 
 const Display = (props) => {
 
     return(
-        <div className="h-20 w-auto text-7xl col-span-3 text-slate-500 bg-purple-300 border">
-            {props.output}
+        <div className={defaultClasses + props.className}
+        >
+        {props.output === '' ? '0' : props.output}
         </div>
     )
 }
